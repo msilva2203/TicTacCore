@@ -1,0 +1,22 @@
+# Ignore generated project files (e.g., Visual Studio, Xcode)
+*.vcxproj*
+*.sln
+*.xcodeproj
+*.xcworkspace
+*.idea/
+
+# Ignore build directories that might be created inside subdirectories
+**/build/
+**/Build/
+
+# Ignore IDE directories
+.vscode/
+.idea/
+
+# Ignore CMake files in all subdirectories
+**/CMakeCache.txt
+**/CMakeFiles/
+**/CMakeScripts/
+**/cmake_install.cmake
+**/CTestTestfile.cmake
+**/Makefile
