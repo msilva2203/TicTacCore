@@ -19,4 +19,6 @@
 **/CMakeScripts/
 **/cmake_install.cmake
 **/CTestTestfile.cmake
-**/Makefile
+
+# Ignore cmake makefiles
+**/Build/Makefile
