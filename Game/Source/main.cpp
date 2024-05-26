@@ -1,4 +1,6 @@
-#include "glad/gl.h"
+#include <iostream>
+
+#include "glad/glad.h"
 #include "GLFW/glfw3.h"
 
 int main(void)
@@ -19,6 +21,16 @@ int main(void)
 
     /* Make the window's context current */
     glfwMakeContextCurrent(window);
+
+     /* Load all OpenGL functions using the GLAD loader */
+    if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
+    {
+        std::cerr << "Failed to initialize GLAD" << std::endl;
+        return -1;
+    }
+
+    /* Set clear color to pink */
+    glClearColor(1.0f, 0.0f, 1.0f, 1.0f);
 
     /* Loop until the user closes the window */
     while (!glfwWindowShouldClose(window))
