@@ -2,6 +2,8 @@
 
 ///////////////////////////////////////////////////////////
 
+#include <string>
+
 #include "glad/glad.h"
 #include "GLFW/glfw3.h"
 
@@ -14,6 +16,8 @@ public:
     void Terminate();
     void MakeContext();
     bool IsOpen();
+
+    void SetTitle(const std::string& NewTitle);
 
 private:
     GLFWwindow* m_Window;

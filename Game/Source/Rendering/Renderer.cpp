@@ -16,6 +16,8 @@ void Renderer::Init()
     RendererWindow = new Window();
     RendererWindow->MakeContext();
 
+    glfwSwapInterval(1);
+
     /* Load all OpenGL functions using the GLAD loader */
     if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
     {
@@ -44,4 +46,9 @@ void Renderer::Terminate()
 bool Renderer::IsActive()
 {
     return RendererWindow->IsOpen();
+}
+
+Window* Renderer::GetWindow()
+{
+    return RendererWindow;
 }

@@ -5,6 +5,8 @@
 #include "glad/glad.h"
 #include "GLFW/glfw3.h"
 
+class Window;
+
 class Renderer
 {
 public:
@@ -15,6 +17,8 @@ public:
     static void Terminate();
 
     static bool IsActive();
+
+    static Window* GetWindow();
 
 private:
 
