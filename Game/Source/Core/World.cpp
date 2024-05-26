@@ -8,6 +8,26 @@
 
 #include "Rendering/Renderer.h"
 
+static World* CurrentWorld;
+
+World* World::Get()
+{
+    return CurrentWorld;
+}
+
+void World::Create()
+{
+    if (CurrentWorld)
+    {
+        for (auto Obj : CurrentWorld->m_Objects)
+        {
+            delete Obj;
+        }
+        delete CurrentWorld;
+    }
+    CurrentWorld = new World;
+}
+
 void World::Run()
 {
     /* Set clear color to pink */

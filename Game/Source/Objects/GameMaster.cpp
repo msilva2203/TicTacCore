@@ -19,3 +19,8 @@ void GameMaster::Update(float DeltaTime)
 {
 
 }
+
+void GameMaster::PrintHello()
+{
+    std::cout << "Hello! Im GameMaster!" << std::endl;
+}

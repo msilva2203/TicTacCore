@@ -36,3 +36,19 @@ void Input::OnMouseButtonRelease(int Button)
         Handler->OnMouseButtonRelease(Button);
     }
 }
+
+void Input::OnKeyPress(int Key)
+{
+    for (auto Handler : m_Handlers)
+    {
+        Handler->OnKeyPress(Key);
+    }
+}
+
+void Input::OnKeyRelease(int Key)
+{
+    for (auto Handler : m_Handlers)
+    {
+        Handler->OnKeyRelease(Key);
+    }
+}

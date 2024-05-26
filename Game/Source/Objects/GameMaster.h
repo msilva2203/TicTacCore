@@ -10,6 +10,8 @@ public:
     virtual void Begin() override;
     virtual void Update(float DeltaTime = 0.0f) override;
 
+    void PrintHello();
+
 private:
 
 

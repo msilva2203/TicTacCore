@@ -24,7 +24,17 @@ void NativeMouseButtonCallback(GLFWwindow* window, int button, int action, int m
 
 static void NativeKeyCallback(GLFWwindow* window, int key, int scancode, int action, int mods)
 {
-    
+    switch (action)
+    {
+    case GLFW_PRESS:
+        Input::Get().OnKeyPress(key);
+        break;
+    case GLFW_RELEASE:
+        Input::Get().OnKeyRelease(key);
+        break;
+    default:
+        break;
+    }
 }
 
 Window::Window()
@@ -61,6 +71,11 @@ void Window::MakeContext()
 bool Window::IsOpen()
 {
     return !glfwWindowShouldClose(m_Window);
+}
+
+void Window::Close()
+{
+    glfwSetWindowShouldClose(m_Window, GLFW_TRUE);
 }
 
 void Window::SetTitle(const std::string& NewTitle)

@@ -16,6 +16,7 @@ public:
     void Terminate();
     void MakeContext();
     bool IsOpen();
+    void Close();
 
     void SetTitle(const std::string& NewTitle);
 

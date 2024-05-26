@@ -10,10 +10,10 @@ int main(void)
 {
     Renderer::Init();
 
-    World MyWorld;
-    MyWorld.AddObject(new GameMaster);
-    MyWorld.AddObject(new Test);
-    MyWorld.Run();
+    World::Create();
+    World::Get()->AddObject(new GameMaster);
+    World::Get()->AddObject(new Test);
+    World::Get()->Run();
 
     Renderer::Terminate();
     return 0;

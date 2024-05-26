@@ -15,6 +15,8 @@ public:
 
     void OnMouseButtonPress(int Button);
     void OnMouseButtonRelease(int Button);
+    void OnKeyPress(int Key);
+    void OnKeyRelease(int Key);
 
 private:
     Input() {};
